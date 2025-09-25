@@ -25,7 +25,7 @@ Navigator > Data Exchange > View User Entities
 
 Note: Based on experience, the search functionality on this page may not always be reliable.
 As an alternative, you can retrieve the User Entity definitions using the following SQL query by substituting <UserEntityName>:
-```
+```sql
 SELECT fue.user_entity_name,
        fr.text
   FROM fusion.ff_user_entities fue,
