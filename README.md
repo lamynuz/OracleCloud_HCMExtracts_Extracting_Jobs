@@ -40,7 +40,7 @@ This repository includes:
 
 1. **HCM Extract Definition (XML)** – ready for import into Oracle Cloud  
 2. **OTBI Templates** in multiple formats to generate reports:  
-   - RTF  
+   - eText (RTF)
    - XSL  
    - Excel  
 3. **Sample job data extraction** from Oracle Cloud
