@@ -1,0 +1,349 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Extract_Definition>
+    <DefinitionName>Jobs HCM Extract</DefinitionName>
+    <XmlTagName>Root</XmlTagName>
+    <ExtTypeCode>HRAR</ExtTypeCode>
+    <DateStart>2000-01-01</DateStart>
+    <Status>A</Status>
+    <IncludeChangesFromLastSuccessfulRun>Y</IncludeChangesFromLastSuccessfulRun>
+    <ExtractVendor>ORA_REPORT</ExtractVendor>
+    <Extract_Block>
+        <BaseUserEntityName>PER_EXT_JOB_FAMILY_UE</BaseUserEntityName>
+        <BlockName>Job Family</BlockName>
+        <XmlTagName>Job_Family</XmlTagName>
+        <MainBlockFlag>Y</MainBlockFlag>
+        <MultiThreadActType>O</MultiThreadActType>
+        <UserName>PER_EXT_JOB_FAMILY_ID_PK</UserName>
+        <BaseBlockName>Job Family</BaseBlockName>
+        <Extract_Record>
+            <RecordName>Job Family Record</RecordName>
+            <XmlTagName>Job_Family_Record</XmlTagName>
+            <TypeCode>D</TypeCode>
+            <ProcessCode>FF</ProcessCode>
+            <FlexStructureCode>Job_Family_Record</FlexStructureCode>
+            <Sequence>10</Sequence>
+            <LastRunExecutedMode>N</LastRunExecutedMode>
+            <OverflowMode>N</OverflowMode>
+            <BaseRecordName>Job_Family_Record</BaseRecordName>
+            <EffectiveStartDate>2000-01-01</EffectiveStartDate>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Family Name</DataElementName>
+                <BaseDataElementName>Job Family Name</BaseDataElementName>
+                <ShortCode>JFN</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>T</DataType>
+                <XmlTagName>Job_Family_Name</XmlTagName>
+                <InformationColumn>1</InformationColumn>
+                <InformationLabel>Job_Family_Name</InformationLabel>
+                <GroupName>Extract Job Family Name</GroupName>
+                <BaseGroupName>PER_EXT_JOB_FAMILY_NAME</BaseGroupName>
+            </Extract_DataElement>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Family Code</DataElementName>
+                <BaseDataElementName>Job Family Code</BaseDataElementName>
+                <ShortCode>JFC</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>T</DataType>
+                <XmlTagName>Job_Family_Code</XmlTagName>
+                <InformationColumn>2</InformationColumn>
+                <InformationLabel>Job_Family_Code</InformationLabel>
+                <GroupName>Extract Job Family Code</GroupName>
+                <BaseGroupName>PER_EXT_JOB_FAMILY_CODE</BaseGroupName>
+            </Extract_DataElement>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Family ID</DataElementName>
+                <BaseDataElementName>Job Family ID</BaseDataElementName>
+                <ShortCode>JFI</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>N</DataType>
+                <XmlTagName>Job_Family_ID</XmlTagName>
+                <InformationColumn>3</InformationColumn>
+                <InformationLabel>Job_Family_ID</InformationLabel>
+                <GroupName>Extract Job Family Id</GroupName>
+                <BaseGroupName>PER_EXT_JOB_FAMILY_ID_PK</BaseGroupName>
+            </Extract_DataElement>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Family Status</DataElementName>
+                <BaseDataElementName>Job Family Status</BaseDataElementName>
+                <ShortCode>JFS</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>T</DataType>
+                <XmlTagName>Job_Family_Status</XmlTagName>
+                <InformationColumn>4</InformationColumn>
+                <InformationLabel>Job_Family_Status</InformationLabel>
+                <GroupName>Extract Job Family Active Status</GroupName>
+                <BaseGroupName>PER_EXT_JOB_FAMILY_ACTIVE_STATUS</BaseGroupName>
+            </Extract_DataElement>
+        </Extract_Record>
+        <Extract_Record>
+            <RecordName>Jobs</RecordName>
+            <XmlTagName>Jobs</XmlTagName>
+            <TypeCode>D</TypeCode>
+            <ProcessCode>FF</ProcessCode>
+            <FlexStructureCode>Jobs</FlexStructureCode>
+            <Sequence>20</Sequence>
+            <LastRunExecutedMode>N</LastRunExecutedMode>
+            <OverflowMode>N</OverflowMode>
+            <NextBlockId>Jobs</NextBlockId>
+            <BaseRecordName>Jobs</BaseRecordName>
+            <EffectiveStartDate>2000-01-01</EffectiveStartDate>
+        </Extract_Record>
+    </Extract_Block>
+    <Extract_Block>
+        <BaseUserEntityName>PER_EXT_SEC_JOB_UE</BaseUserEntityName>
+        <BlockName>Jobs</BlockName>
+        <XmlTagName>Jobs</XmlTagName>
+        <BaseBlockName>Jobs</BaseBlockName>
+        <Block_Link>
+            <ParentBlockId>Job Family</ParentBlockId>
+            <UserName1>PER_EXT_JOB_FAMILY_ID_PK</UserName1>
+            <UserName>PER_EXT_JOB_FAMILY_ID</UserName>
+        </Block_Link>
+        <Extract_Record>
+            <RecordName>Job Record</RecordName>
+            <XmlTagName>Job_Record</XmlTagName>
+            <TypeCode>D</TypeCode>
+            <ProcessCode>FF</ProcessCode>
+            <FlexStructureCode>Job_Record</FlexStructureCode>
+            <Sequence>10</Sequence>
+            <LastRunExecutedMode>N</LastRunExecutedMode>
+            <OverflowMode>N</OverflowMode>
+            <BaseRecordName>Job_Record</BaseRecordName>
+            <EffectiveStartDate>2000-01-01</EffectiveStartDate>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Name</DataElementName>
+                <BaseDataElementName>Job Name</BaseDataElementName>
+                <ShortCode>JN</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>T</DataType>
+                <XmlTagName>Job_Name</XmlTagName>
+                <InformationColumn>1</InformationColumn>
+                <InformationLabel>Job_Name</InformationLabel>
+                <GroupName>Job Name</GroupName>
+                <BaseGroupName>Job Name</BaseGroupName>
+            </Extract_DataElement>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Code</DataElementName>
+                <BaseDataElementName>Job Code</BaseDataElementName>
+                <ShortCode>JC</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>T</DataType>
+                <XmlTagName>Job_Code</XmlTagName>
+                <InformationColumn>2</InformationColumn>
+                <InformationLabel>Job_Code</InformationLabel>
+                <GroupName>Job Code</GroupName>
+                <BaseGroupName>Job Code</BaseGroupName>
+            </Extract_DataElement>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job Id</DataElementName>
+                <BaseDataElementName>Job Id</BaseDataElementName>
+                <ShortCode>JI</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>N</DataType>
+                <XmlTagName>Job_Id</XmlTagName>
+                <InformationColumn>3</InformationColumn>
+                <InformationLabel>Job_Id</InformationLabel>
+                <GroupName>Job Grade Ladder Job Id</GroupName>
+                <BaseGroupName>Job Grade Ladder Job Id</BaseGroupName>
+            </Extract_DataElement>
+            <Extract_DataElement>
+                <StartDate>2000-01-01</StartDate>
+                <DataElementName>Job status</DataElementName>
+                <BaseDataElementName>Job status</BaseDataElementName>
+                <ShortCode>JS</ShortCode>
+                <TypeCode>F</TypeCode>
+                <DataType>T</DataType>
+                <XmlTagName>Job_status</XmlTagName>
+                <InformationColumn>4</InformationColumn>
+                <InformationLabel>Job_status</InformationLabel>
+                <GroupName>Job Active Status</GroupName>
+                <BaseGroupName>Job Active Status</BaseGroupName>
+            </Extract_DataElement>
+        </Extract_Record>
+    </Extract_Block>
+    <Delivery_Option>
+        <DateFrom>2000-01-01</DateFrom>
+        <DateTo>4712-12-31</DateTo>
+        <DeliveryOptionName>Data</DeliveryOptionName>
+        <DeliveryType>NONE</DeliveryType>
+        <CalendarCode>GREGORIAN</CalendarCode>
+        <OutputName>Data</OutputName>
+        <OutputType>XML</OutputType>
+        <MandatoryFlag>Y</MandatoryFlag>
+        <Delivery_Option_Detail>
+            <OptionType>BURSTING</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>FILE_NAME_DE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>KEY</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>LOCALE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>OBJECT_ID</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>OBJECT_TYPE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>SYSTEM_DOCUMENT_TYPE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>TIMEZONE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>ZIP</OptionType>
+        </Delivery_Option_Detail>
+    </Delivery_Option>
+    <Delivery_Option>
+        <DateFrom>2000-01-01</DateFrom>
+        <DateTo>4712-12-31</DateTo>
+        <BipReportName>/Custom/Integration/Jobs.xdo</BipReportName>
+        <BipTemplateName>Jobs</BipTemplateName>
+        <DeliveryOptionName>Output</DeliveryOptionName>
+        <DeliveryType>NONE</DeliveryType>
+        <CalendarCode>GREGORIAN</CalendarCode>
+        <OutputName>Output</OutputName>
+        <OutputType>TEXT</OutputType>
+        <MandatoryFlag>Y</MandatoryFlag>
+        <Delivery_Option_Detail>
+            <OptionType>BURSTING</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>FILE_NAME_DE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>KEY</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>LOCALE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>OBJECT_ID</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>OBJECT_TYPE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>SYSTEM_DOCUMENT_TYPE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>TIMEZONE</OptionType>
+        </Delivery_Option_Detail>
+        <Delivery_Option_Detail>
+            <OptionType>ZIP</OptionType>
+        </Delivery_Option_Detail>
+    </Delivery_Option>
+    <Extract_Parameter>
+        <ParamName>Baseline Only</ParamName>
+        <EssParamName>BASELINE_ONLY</EssParamName>
+        <XmlTagName>baseline_only</XmlTagName>
+        <DataType>T</DataType>
+        <DescriptionInParam>Baseline Only</DescriptionInParam>
+        <AllowedInExpression>Y</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>N</DisplayFlag>
+        <ParamDispType>LK</ParamDispType>
+        <ParamLookup>YES_NO</ParamLookup>
+        <ParamSequence>50</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Changes Only</ParamName>
+        <EssParamName>CHANGES_ONLY</EssParamName>
+        <XmlTagName>changes_only</XmlTagName>
+        <DataType>T</DataType>
+        <DescriptionInParam>Changes Only</DescriptionInParam>
+        <AllowedInExpression>Y</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>Y</DisplayFlag>
+        <ParamDispType>LK</ParamDispType>
+        <ParamLookup>PER_EXT_CHANGES_ONLY</ParamLookup>
+        <ParamSequence>70</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+        <DefaultVal>N</DefaultVal>
+        <DefaultType>CONST</DefaultType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Effective Date</ParamName>
+        <EssParamName>EFFECTIVE_DATE</EssParamName>
+        <XmlTagName>effective_date</XmlTagName>
+        <DataType>D</DataType>
+        <DescriptionInParam>Effective Date</DescriptionInParam>
+        <AllowedInExpression>Y</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>Y</DisplayFlag>
+        <ParamSequence>80</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Legislative Data Group</ParamName>
+        <EssParamName>LEGISLATIVE_DATA_GROUP_ID</EssParamName>
+        <XmlTagName>legislative_data_group_id</XmlTagName>
+        <DataType>N</DataType>
+        <DescriptionInParam>Legislative Data Group</DescriptionInParam>
+        <AllowedInExpression>Y</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>N</DisplayFlag>
+        <ParamSequence>10</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Parameter Group</ParamName>
+        <EssParamName>PARAMETER_GROUP_ID</EssParamName>
+        <XmlTagName>parameter_group_id</XmlTagName>
+        <DataType>N</DataType>
+        <DescriptionInParam>Parameter Group</DescriptionInParam>
+        <AllowedInExpression>N</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>N</DisplayFlag>
+        <ParamSequence>20</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Report Category</ParamName>
+        <EssParamName>REPORT_CATEGORY_ID</EssParamName>
+        <XmlTagName>report_category_id</XmlTagName>
+        <DataType>N</DataType>
+        <DescriptionInParam>Report Category</DescriptionInParam>
+        <AllowedInExpression>N</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>N</DisplayFlag>
+        <ParamSequence>90</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Request ID</ParamName>
+        <EssParamName>REQUEST_ID</EssParamName>
+        <XmlTagName>request_id</XmlTagName>
+        <DataType>N</DataType>
+        <DescriptionInParam>Request ID</DescriptionInParam>
+        <AllowedInExpression>N</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>N</DisplayFlag>
+        <ParamSequence>30</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+    <Extract_Parameter>
+        <ParamName>Start Date</ParamName>
+        <EssParamName>START_DATE</EssParamName>
+        <XmlTagName>start_date</XmlTagName>
+        <DataType>D</DataType>
+        <DescriptionInParam>Start Date</DescriptionInParam>
+        <AllowedInExpression>Y</AllowedInExpression>
+        <Generated>Y</Generated>
+        <DisplayFlag>N</DisplayFlag>
+        <ParamSequence>40</ParamSequence>
+        <ParamUsageType>INPUT</ParamUsageType>
+    </Extract_Parameter>
+</Extract_Definition>
