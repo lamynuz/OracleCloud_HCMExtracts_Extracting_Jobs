@@ -7,32 +7,32 @@ This repository provides a straightforward example demonstrating how to create a
 The extract leverages two **User Entities** to retrieve job-related information:
 
 - **PER_EXT_JOB_FAMILY_UE**
-'''sql
+```sql
 SELECT * 
   FROM per_job_family_f_vl jobfam 
  WHERE TRUNC(&B1) BETWEEN jobfam.effective_start_date AND jobfam.effective_end_date
-'''
+```
 
 - **PER_EXT_SEC_JOB_UE**
-'''sql
+```sql
 SELECT * 
   FROM per_job_secured_list_v job 
  WHERE TRUNC(&B1) BETWEEN effective_start_date AND effective_end_date
-'''
+```
 
 These queries can also be accessed via the Oracle Cloud interface under:
 Navigator > Data Exchange > View User Entities
 
 Note: Based on experience, the search functionality on this page may not always be reliable.
 As an alternative, you can retrieve the User Entity definitions using the following SQL query by substituting <UserEntityName>:
-'''
+```
 SELECT fue.user_entity_name,
        fr.text
   FROM fusion.ff_user_entities fue,
        fusion.ff_routes fr
  WHERE fue.route_id = fr.route_id
    AND fue.user_entity_name = '<UserEntityName>'
-'''
+```
 
 ## Provided Files
 
